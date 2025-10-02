@@ -7,24 +7,12 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-100: oklch(93.6% 0.032 17.717);
     --color-amber-300: oklch(87.9% 0.169 91.605);
-    --color-amber-400: oklch(82.8% 0.189 84.429);
-    --color-yellow-50: oklch(98.7% 0.026 102.212);
-    --color-yellow-300: oklch(90.5% 0.182 98.111);
-    --color-green-700: oklch(52.7% 0.154 150.069);
-    --color-gray-100: oklch(96.7% 0.003 264.542);
-    --color-gray-300: oklch(87.2% 0.01 258.338);
-    --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
-    --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-gray-900: oklch(21% 0.034 264.665);
-    --color-black: #000;
     --spacing: 0.25rem;
-    --container-3xs: 16rem;
-    --container-2xl: 42rem;
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
@@ -35,10 +23,6 @@
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
     --text-6xl--line-height: 1;
-    --text-7xl: 4.5rem;
-    --text-7xl--line-height: 1;
-    --text-8xl: 6rem;
-    --text-8xl--line-height: 1;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
@@ -249,14 +233,20 @@
   .w-\[27rem\] {
     width: 27rem;
   }
-  .w-\[29rem\] {
-    width: 29rem;
-  }
   .w-\[30rem\] {
     width: 30rem;
   }
+  .w-\[35rem\] {
+    width: 35rem;
+  }
   .w-\[40rem\] {
     width: 40rem;
+  }
+  .w-\[43rem\] {
+    width: 43rem;
+  }
+  .w-\[45rem\] {
+    width: 45rem;
   }
   .w-\[48rem\] {
     width: 48rem;
@@ -306,6 +296,27 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .space-y-3 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-3\.5 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 3.5) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 3.5) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-4 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
   .space-y-5 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
@@ -313,18 +324,11 @@
       margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
-  .space-y-11 {
+  .space-y-5\.5 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 11) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 11) * calc(1 - var(--tw-space-y-reverse)));
-    }
-  }
-  .space-x-4 {
-    :where(& > :not(:last-child)) {
-      --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * 4) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-x-reverse)));
+      margin-block-start: calc(calc(var(--spacing) * 5.5) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 5.5) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .space-x-8 {
@@ -361,9 +365,6 @@
   .bg-\[\#ffcd6e\] {
     background-color: #ffcd6e;
   }
-  .bg-amber-300 {
-    background-color: var(--color-amber-300);
-  }
   .object-cover {
     object-fit: cover;
   }
@@ -397,26 +398,17 @@
   .py-3\.5 {
     padding-block: calc(var(--spacing) * 3.5);
   }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
-  }
-  .py-10 {
-    padding-block: calc(var(--spacing) * 10);
   }
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
   }
   .pl-7 {
     padding-left: calc(var(--spacing) * 7);
-  }
-  .pl-8 {
-    padding-left: calc(var(--spacing) * 8);
-  }
-  .pl-10 {
-    padding-left: calc(var(--spacing) * 10);
-  }
-  .pl-19 {
-    padding-left: calc(var(--spacing) * 19);
   }
   .pl-30 {
     padding-left: calc(var(--spacing) * 30);
@@ -428,26 +420,22 @@
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
-  .text-6xl {
-    font-size: var(--text-6xl);
-    line-height: var(--tw-leading, var(--text-6xl--line-height));
-  }
-  .text-\[0\.5rem\] {
-    font-size: 0.5rem;
-  }
   .text-\[1\.1rem\] {
     font-size: 1.1rem;
   }
-  .text-\[1\.05rem\] {
-    font-size: 1.05rem;
+  .text-\[1\.2rem\] {
+    font-size: 1.2rem;
+  }
+  .text-\[1\.6rem\] {
+    font-size: 1.6rem;
   }
   .text-\[1\.25rem\] {
     font-size: 1.25rem;
@@ -479,6 +467,9 @@
   }
   .text-gray-800 {
     color: var(--color-gray-800);
+  }
+  .text-gray-900 {
+    color: var(--color-gray-900);
   }
   .underline {
     text-decoration-line: underline;
