@@ -18,6 +18,7 @@
     --spacing: 0.25rem;
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --font-weight-normal: 400;
     --font-weight-semibold: 600;
     --radius-md: 0.375rem;
     --radius-2xl: 1rem;
@@ -207,6 +208,9 @@
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
+  .hidden {
+    display: none;
+  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -243,6 +247,10 @@
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
   }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
