@@ -14,7 +14,13 @@
     <p
       class="bg-amber-800 py-16 mx-3.5 p-4 text-2xl rounded-2xl mt-3 text-center font-mono shadow-lg text-white sm:bg-amber-300 md:bg-yellow-700 lg:bg-green-900"
     >
-      In Progress...
+      In Progress<b id="load" class="hidden font-normal">...</b>
     </p>
+    <script>
+      const load = document.getElementById("load");
+      setInterval(() => {
+        load.classList.toggle("hidden");
+      }, 500);
+    </script>
   </body>
 </html>
